@@ -1,0 +1,4 @@
+*.bak
+ENV/*
+!ENV/Example/
+!ENV/Example/**
