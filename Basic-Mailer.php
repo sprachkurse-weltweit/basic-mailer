@@ -71,7 +71,7 @@ $mail->CharSet = 'UTF-8';
 // Build the email body
 $mail->isHTML(true); // Enable HTML mode
 
-$body = "<h2>$subject</h2>";
+$body = "<h2>$subject</h2>\n\n";
 $body .= "<table cellpadding='6' cellspacing='0' border='1' style='border-collapse:collapse; font-family: monospace;'>";
 
 foreach ($_POST as $field => $value) {
