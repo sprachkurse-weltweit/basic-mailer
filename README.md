@@ -9,7 +9,7 @@ An implementation of a general form mailer for *Sprachkurse Weltweit* utilizing 
 - Needs an `env.php` file (see *Environmental Variables*)
 
 ## Environmental Variables
-Users (different environmental settings) can be created by creating a folder with
+Users (different environmental settings) can be created by placing a folder with
 the name of the user inside the `./ENV/` folder containing a `env.php` file.
 
 e.g. `./ENV/Tom/env.php`
