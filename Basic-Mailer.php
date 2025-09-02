@@ -17,12 +17,15 @@ require $path_to_backend . 'PHPMailer6/src/SMTP.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-// honeypot bot trap
+// Honeypot bot trap
 if(array_key_exists('contact_notes', $_POST) && !empty($_POST['contact_notes'])) {
   echo 'Thank you for your request!';
   sleep(5);
   exit;
 }
+
+// Remove honeypot field
+unset($_POST['contact_notes']);
 
 // Validate `email_from` field
 if (empty($_POST['email_from']) || !filter_var($_POST['email_from'], FILTER_VALIDATE_EMAIL)) {
